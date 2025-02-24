@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Some</string>
+    <string name="btWeather">Find out the weather</string>
+    <!-- Just examples -->
+    <string-array name="cities">
+        <item>Some city</item>
+        <item>Some city 2</item>
+    </string-array>
+    <string-array name="weather">
+        <item id="0">Some weather</item>
+        <item id="1">Some weather 2</item>
+    </string-array>
+</resources>

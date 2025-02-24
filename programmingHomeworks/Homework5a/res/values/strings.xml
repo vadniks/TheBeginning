@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Some</string>
+    <string name="btWeather">Find out the weather</string>
+    <string name="show_pressure">Show pressure</string>
+    <string name="show_forecast_for_tomorrow">Show forecast for tomorrow</string>
+    <string name="show_forecast_for_next_week">Show forecast for next week</string>
+    <string name="pressure">Some pressure</string>
+    <string name="forecastTom">Some forecast for tomorrow</string>
+    <string name="forecastForNWeek">Some forecast for next week</string>
+    <!-- Just examples -->
+    <string-array name="cities">
+        <item>Some city</item>
+        <item>Some city 2</item>
+    </string-array>
+    <string-array name="weather">
+        <item id="0">Some weather</item>
+        <item id="1">Some weather 2</item>
+    </string-array>
+</resources>

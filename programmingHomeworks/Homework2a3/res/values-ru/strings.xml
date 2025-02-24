@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Russian -->
+    <string name="app_name">Что-то</string>
+    <string name="btWeather">Узнать погоду</string>
+    <!-- Just examples -->
+    <string-array name="cities">
+        <item>Какой-то город</item>
+        <item>Какой-то город 2</item>
+    </string-array>
+    <string-array name="weather">
+        <item id="0">Какаета погода</item>
+        <item id="1">Какаета погода 2</item>
+    </string-array>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Something like dark theme -->
+    <color name="colorPrimary">#333640</color>
+    <color name="colorPrimaryDark">#292b33</color>
+    <color name="colorAccent">#949494</color>
+    <color name="colorDark">#37474f</color>
+    <color name="colorSpinnerDark">#778293</color>
+    <color name="colorText">#aeaeae</color>
+    <color name="colorButton">#878280</color>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HW3A2</string>
+    <string name="choose_city">Choose city</string>
+    <string name="actvTint">City</string>
+    <string name="done">done</string>
+    <string name="textEmpty">Text field is empty!</string>
+    <string name="noPlace">No data found for chosen parameter.</string>
+    <string name="rFailed">Request failed</string>
+</resources>

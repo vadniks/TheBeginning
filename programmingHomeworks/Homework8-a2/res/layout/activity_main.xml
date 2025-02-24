@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.some.hw3a2.MainActivity">
+
+    <TextView
+            android:layout_gravity="center"
+            tools:text="City"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/city"
+            android:textSize="24sp"
+            android:layout_marginBottom="125dp"/>
+
+    <TextView
+            android:layout_gravity="center"
+            tools:text="Details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/details"
+            android:textSize="18sp"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:text="@string/choose_city"
+            android:layout_gravity="center"
+            android:layout_marginTop="130dp"/>
+
+</android.support.design.widget.CoordinatorLayout>

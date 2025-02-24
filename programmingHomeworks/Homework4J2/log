@@ -1,0 +1,6 @@
+Sun Dec 31 12:47:33 MSK 2017 | Message is: testMessage1 .|
+Sun Dec 31 12:47:33 MSK 2017 | Message is: testMessage2 .|
+Sun Dec 31 12:48:25 MSK 2017 | Message is: testMessageAfterAppWasClosed1 .|
+Sun Dec 31 12:48:25 MSK 2017 | Message is: testMessageAfterAppWasClosed2 .|
+Sun Dec 31 12:59:50 MSK 2017 | Message is: testMessageAfterAppWasClosed3 .|
+Sun Dec 31 13:03:56 MSK 2017 | Message is: testMessageAfterAppWasClosed4 .|
