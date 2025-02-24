@@ -1,0 +1,187 @@
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef char* ss;
+typedef const char* cs;
+typedef const int ci;
+
+#define _cn(x) \
+	x(ci& xy, int**& mx, sbs<sg>& sb) : \
+		prx(xy, mx, sb) \
+	{}
+
+/////////////////////////////////////
+
+enum sg {
+	sg1 = 0,
+	sg2 = 1
+};
+
+/////////////////////////////////////
+
+template<typename t>
+/*abstarc*/ class sbs {
+public:
+	virtual void hnd(t a) = 0;
+};
+
+template<typename t>
+/*abstarc*/ class obs {
+public:
+	virtual void evn(t a) = 0;
+};
+
+// pair of two elements
+template<
+	typename l, 
+	typename r> // generics
+struct pr {
+	l a = 0; // left
+	r b = 0; // right
+
+	// initialization
+	pr(l a, r b) : a(a), b(b) {}
+	~pr() = default; // destructor
+};
+
+/////////////////////////////////////
+
+class inp {
+
+};
+
+/////////////////////////////////////
+
+// proxy
+/*abstract*/ class prx {
+protected:
+	ci& xy;
+	int**& mx; // reference to matrix
+	sbs<sg>& sb; // reference to subscribers (observers)
+
+public:
+
+	prx(ci& xy, int**& mx, sbs<sg>& sb) :
+		xy(xy), mx(mx), sb(sb)
+	{}
+};
+
+/////////////////////////////////////
+
+// treat
+/*abstract*/ class trt : public obs<bool>, public prx {
+public:
+
+	_cn(trt)
+	~trt() = default;
+
+    // find
+	virtual void fnd(int a, int b) = 0;
+
+    // event
+	void evn(bool a) override
+	{ sb.hnd(a ? sg::sg1 : sg::sg2); }
+
+    // bind
+	bool bnd(int a)
+	{ return a >= 0 and a < xy; }
+
+    // check
+	int chk(int a)
+	{ return a >= 0 and a < xy 
+		? a : throw 1; }
+};
+
+/////////////////////////////////////
+
+// treat up
+class tru final : public trt {
+public:
+	void fnd(int a, int b) override 
+	{ evn(!mx[a][chk(b+1)]); }
+};
+
+/////////////////////////////////////
+
+// treat right
+class trr final : public trt {
+public:
+	void fnd(int a, int b) override
+	{ evn(!mx[chk(a+1)][b]); }
+};
+
+/////////////////////////////////////
+
+// treat down
+class trd final : public trt {
+public:
+	void fnd(int a, int b) override
+	{ evn(!mx[a][chk(b-1)]); }
+};
+
+/////////////////////////////////////
+
+// step
+class stp final : public sbs<int*>, public prx {
+public:
+
+	_cn(stp)
+
+    // handle
+	void hnd(int* a) override {
+
+	}
+};
+
+/////////////////////////////////////
+
+class oup {
+
+};
+
+/////////////////////////////////////
+
+// runner
+class rnr final : sbs<sg>, obs<int*> {
+private:
+	static ci xy = 10;
+	int** mx = new int*[xy];
+	static ci ma = 0;
+	static ci mb = 1;
+	sbs<int*>& sb = *new stp(xy, mx, *this);
+
+	rnr() {
+		nt();
+
+		evn((int[]) { 0, 0 });
+	}
+
+	void nt() {
+		ss a = 0;
+		for (int i = 0, j = 0; i < xy; i++) {
+			a = new char[xy];
+			cin >> a;
+
+			mx[i] = new int[xy];
+			for (j = 0; j < xy; j++)
+				mx[i][j] = a[j];
+		}
+	}
+
+	void hnd(sg a) override {
+
+	}
+
+	void evn(int* a) override
+	{ sb.hnd(a); }
+};
+
+/////////////////////////////////////
+
+int main() {
+	
+	return 0;
+}
